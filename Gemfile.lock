@@ -1,15 +1,16 @@
 PATH
   remote: .
   specs:
-    rack-maintenance (2.1.0)
-      rack (>= 1.0)
+    rack-maintenance (3.0.0)
+      rack (>= 2.1.4)
+      rake (>= 12.3.3)
 
 GEM
   remote: http://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    rack (1.6.4)
-    rake (10.1.1)
+    rack (2.2.4)
+    rake (13.0.6)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -28,4 +29,4 @@ DEPENDENCIES
   rspec (>= 2.0)
 
 BUNDLED WITH
-   1.12.5
+   2.3.17

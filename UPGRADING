@@ -1,3 +1,14 @@
+******** Rack::Maintenance 3.0.0 *********
+
+This gem now requires rack version 2.1.4 or higher.
+
+The reason for this change is that earlier versions have
+security vulnerabilities. Because of this major change, I
+took the time to require up-to-date versions of all
+dependencies.
+
+Rack::Maintenance 3.0.0 should be a drop-in upgrade.
+
 
 ******** Rack::Maintenance 2.0.0 *********
 
