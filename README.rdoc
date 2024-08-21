@@ -38,6 +38,13 @@ and then run `bundle`.
    :env  => 'MAINTENANCE',
    :processor => lambda { |content| ERB.new(content).result }
 
+# You may provide an object that responds to call to provide
+# your own logic for determining when the maintenance page
+# should be displayed.
+ config.middleware.use 'Rack::Maintenance',
+   :file => Rails.root.join('public', 'maintenance.html.erb'),
+   :condition => lambda { MyServerStatus.maintenance_mode? }
+
 If <tt>:env</tt> is specified, all requests will be shown the
 maintenance page if the environment variable is set.
 

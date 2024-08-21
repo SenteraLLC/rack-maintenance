@@ -35,11 +35,17 @@ private ######################################################################
     options[:file]
   end
 
+  def condition
+    options[:condition]
+  end
+
   def processor
     options[:processor] || lambda { |content| content }
   end
 
   def maintenance?
+    return condition.call if condition
+
     environment ? ENV[environment] : File.exists?(file)
   end
 
